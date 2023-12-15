@@ -1,5 +1,14 @@
 package arquitetura_design_software.solid_chatgpt.todos;
 
+//Single Responsibility Principle (SRP): A classe `ManipuladorArquivo`
+// tem a responsabilidade única de lidar com operações de leitura e escrita em arquivos.
+//Open-Closed Principle (OCP): A classe `ManipuladorArquivo` pode ser estendida sem modificar
+// seu código para lidar com diferentes tipos de armazenamento (por exemplo, banco de dados)
+// implementando a interface `OperacoesIO`.
+//Liskov Substitution Principle (LSP): A classe ManipuladorArquivo é uma substituição válida
+// para a interface OperacoesIO. A classe derivada (ManipuladorArquivo) pode ser usada onde a
+// classe base (OperacoesIO) é esperada.
+
 // Implementação concreta para leitura e escrita em arquivos
 class ManipuladorArquivo implements OperacoesIO {
     private String nomeArquivo;
